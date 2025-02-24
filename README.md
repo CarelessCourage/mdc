@@ -134,6 +134,22 @@ export default defineNuxtConfig({
   }
 })
 ```
+In order to overwrite the prose components with your own you will need to tell nuxt to make your prose components global.
+
+```ts
+export default defineNuxtConfig({
+  modules: ['@nuxtjs/mdc'],
+  mdc: {
+    components: {
+      prose: true
+    }
+  },
+  components: {
+    global: true,
+    path: './components/prose'
+  }
+})
+```
 
 Here is the list of available prose components:
 
